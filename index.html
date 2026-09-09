@@ -3,323 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>REDLINE | Tennessee</title>
-
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: Arial, Helvetica, sans-serif;
-
-            background:
-                radial-gradient(circle at center, #2b0000 0%, #090909 45%, #000000 100%);
-
-            color: white;
-            overflow: hidden;
-        }
-
-        /* Background red glow */
-        body::before {
-            content: "";
-            position: fixed;
-            width: 600px;
-            height: 600px;
-            background: rgba(180, 0, 0, 0.15);
-            filter: blur(100px);
-            border-radius: 50%;
-            z-index: -1;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 650px;
-            text-align: center;
-        }
-
-        /* Main Box */
-        .main-box {
-            background: rgba(15, 15, 15, 0.95);
-            border: 2px solid #b30000;
-            border-radius: 18px;
-            padding: 40px 30px;
-            box-shadow:
-                0 0 20px rgba(180, 0, 0, 0.4),
-                0 0 60px rgba(180, 0, 0, 0.15);
-        }
-
-        /* Logo / Title */
-        .logo {
-            font-size: 55px;
-            font-weight: 900;
-            letter-spacing: 8px;
-            color: #ffffff;
-            text-shadow:
-                0 0 10px #ff0000,
-                0 0 25px rgba(255, 0, 0, 0.6);
-            margin-bottom: 5px;
-        }
-
-        .subtitle {
-            color: #999;
-            font-size: 14px;
-            letter-spacing: 3px;
-            margin-bottom: 35px;
-            text-transform: uppercase;
-        }
-
-        /* Navigation Buttons */
-        .tabs {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 14px;
-        }
-
-        .tab {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            min-height: 60px;
-            padding: 15px;
-
-            color: white;
-            text-decoration: none;
-            font-size: 17px;
-            font-weight: bold;
-
-            background: #111;
-            border: 1px solid #444;
-            border-radius: 10px;
-
-            transition: 0.25s ease;
-        }
-
-        .tab:hover {
-            background: #b30000;
-            border-color: #ff0000;
-            transform: translateY(-3px);
-
-            box-shadow:
-                0 5px 20px rgba(255, 0, 0, 0.35);
-        }
-
-        /* Timer Section */
-        .timer-box {
-            margin-top: 28px;
-            padding: 20px;
-
-            background: linear-gradient(
-                135deg,
-                #160000,
-                #090909
-            );
-
-            border: 1px solid #700000;
-            border-radius: 12px;
-        }
-
-        .timer-title {
-            font-size: 13px;
-            color: #999;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-        }
-
-        #countdown {
-            font-size: 25px;
-            font-weight: bold;
-            color: #ff3333;
-            letter-spacing: 2px;
-        }
-
-        .meet-date {
-            margin-top: 8px;
-            font-size: 13px;
-            color: #777;
-        }
-
-        /* Footer */
-        .footer {
-            margin-top: 20px;
-            color: #555;
-            font-size: 12px;
-        }
-
-        /* Mobile */
-        @media (max-width: 500px) {
-
-            .main-box {
-                padding: 30px 20px;
-            }
-
-            .logo {
-                font-size: 40px;
-                letter-spacing: 5px;
-            }
-
-            .tab {
-                font-size: 15px;
-            }
-
-            #countdown {
-                font-size: 19px;
-            }
-        }
-    </style>
+    <meta name="theme-color" content="#050505">
+    <title>REDLINE | Tennessee Car & Bike Community</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-    <div class="container">
+    <!-- Optional video background:
+         Put images/redline-bg.mp4 in the images folder and uncomment this block.
+    <video class="video-bg" autoplay muted loop playsinline>
+        <source src="images/redline-bg.mp4" type="video/mp4">
+    </video>
+    -->
 
-        <div class="main-box">
-
-            <div class="logo">
-                REDLINE
-            </div>
-
-            <div class="subtitle">
-                Tennessee Car & Bike Community
-            </div>
-
-
-            <!-- WEBSITE TABS -->
-            <div class="tabs">
-
-                <!-- TikTok -->
-                <a
-                    class="tab"
-                    href="https://www.tiktok.com/"
-                    target="_blank"
-                >
-                    🎵 TikTok Page
-                </a>
-
-                <!-- Merch -->
-                <a
-                    class="tab"
-                    href="https://itzrymo.com/"
-                    target="_blank"
-                >
-                    🛒 Redline Merch
-                </a>
-
-                <!-- Meet Information -->
-                <a
-                    class="tab"
-                    href="#"
-                    target="_blank"
-                >
-                    🏁 Redline Meet Information
-                </a>
-
-            </div>
-
-
-            <!-- NEXT MEET COUNTDOWN -->
-            <div class="timer-box">
-
-                <div class="timer-title">
-                    Next Redline Meet
-                </div>
-
-                <div id="countdown">
-                    Loading...
-                </div>
-
-                <div class="meet-date">
-                    Next Meet: September 10, 2026
-                </div>
-
-            </div>
-
-
-            <div class="footer">
-                © 2026 REDLINE • Tennessee
-            </div>
-
-        </div>
-
+    <div class="background">
+        <div class="red-glow glow-one"></div>
+        <div class="red-glow glow-two"></div>
+        <div class="road-light light-one"></div>
+        <div class="road-light light-two"></div>
+        <div id="rain"></div>
+        <div class="vignette"></div>
+        <div class="scanlines"></div>
     </div>
 
+    <main class="site">
 
-    <script>
+        <header class="hero">
+            <div class="eyebrow">TENNESSEE • CAR & BIKE COMMUNITY</div>
+            <h1>RED<span>LINE</span></h1>
+            <p>Ride hard. Meet up. Leave a mark.</p>
+        </header>
 
-        /*
-        ==========================================
-        REDLINE MEET DATE
-        ==========================================
+        <nav class="nav">
+            <a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok Page</a>
+            <a href="https://itz-rymo-shop.fourthwall.com/" target="_blank" rel="noopener">Redline Merch</a>
+            <a href="https://discord.com/" target="_blank" rel="noopener">Discord</a>
+            <a href="meet-info.html">Meet Information</a>
+        </nav>
 
-        Change this date whenever you schedule
-        a new meet.
+        <section class="content-card">
 
-        Format:
-        YYYY-MM-DDTHH:MM:SS
+            <div class="section-heading">
+                <div>
+                    <span class="small-label">THE REDLINE GALLERY</span>
+                    <h2>BUILT FOR THE <span>STREETS.</span></h2>
+                </div>
+                <div class="status">
+                    <span class="dot"></span> LIVE COMMUNITY
+                </div>
+            </div>
 
-        Example:
-        September 26, 2026 at 7:00 PM
-        ==========================================
-        */
+            <!--
+                IMAGE FOLDER:
+                Put your pictures in /images/
+                Then change the filenames below if needed.
 
-        const meetDate = new Date("2026-09-10T19:00:00").getTime();
+                Recommended:
+                image1.jpg
+                image2.jpg
+                image3.jpg
+                image4.jpg
+                image5.jpg
+                image6.jpg
+            -->
+            <div class="gallery">
 
+                <a class="photo photo-large" href="images/image1.jpg" target="_blank">
+                    <img src="images/image1.jpg" alt="Redline car and bike meet">
+                    <div class="photo-overlay">
+                        <span>01</span><b>REDLINE</b>
+                    </div>
+                </a>
 
-        function updateCountdown() {
+                <a class="photo photo-tall" href="images/image2.jpg" target="_blank">
+                    <img src="images/image2.jpg" alt="Redline motorcycle">
+                    <div class="photo-overlay">
+                        <span>02</span><b>RIDE</b>
+                    </div>
+                </a>
 
-            const now = new Date().getTime();
+                <a class="photo photo-wide" href="images/image3.jpg" target="_blank">
+                    <img src="images/image3.jpg" alt="Redline sportbike">
+                    <div class="photo-overlay">
+                        <span>03</span><b>BUILT</b>
+                    </div>
+                </a>
 
-            const difference = meetDate - now;
+                <a class="photo photo-medium" href="images/image4.jpg" target="_blank">
+                    <img src="images/image4.jpg" alt="Redline car">
+                    <div class="photo-overlay">
+                        <span>04</span><b>MEET</b>
+                    </div>
+                </a>
 
+                <a class="photo photo-medium" href="images/image5.jpg" target="_blank">
+                    <img src="images/image5.jpg" alt="Redline community">
+                    <div class="photo-overlay">
+                        <span>05</span><b>CREW</b>
+                    </div>
+                </a>
 
-            if (difference <= 0) {
+                <a class="photo photo-wide" href="images/image6.jpg" target="_blank">
+                    <img src="images/image6.jpg" alt="Redline night meet">
+                    <div class="photo-overlay">
+                        <span>06</span><b>TENNESSEE</b>
+                    </div>
+                </a>
 
-                document.getElementById("countdown").innerHTML =
-                    "THE MEET IS HERE! 🏁";
+            </div>
 
-                return;
-            }
+            <section class="meet-box">
+                <div>
+                    <span class="small-label">NEXT REDLINE MEET</span>
+                    <h3 id="meetName">REDLINE TENNESSEE MEET</h3>
+                    <p id="meetDateText">September 26, 2026 • 7:00 PM</p>
+                </div>
 
+                <div class="countdown">
+                    <div><strong id="days">00</strong><span>DAYS</span></div>
+                    <i>:</i>
+                    <div><strong id="hours">00</strong><span>HRS</span></div>
+                    <i>:</i>
+                    <div><strong id="minutes">00</strong><span>MIN</span></div>
+                    <i>:</i>
+                    <div><strong id="seconds">00</strong><span>SEC</span></div>
+                </div>
+            </section>
 
-            const days = Math.floor(
-                difference / (1000 * 60 * 60 * 24)
-            );
+        </section>
 
-            const hours = Math.floor(
-                (difference % (1000 * 60 * 60 * 24))
-                / (1000 * 60 * 60)
-            );
+        <footer>
+            <span>REDLINE</span> • TENNESSEE • EST. 2026
+        </footer>
 
-            const minutes = Math.floor(
-                (difference % (1000 * 60 * 60))
-                / (1000 * 60)
-            );
+    </main>
 
-            const seconds = Math.floor(
-                (difference % (1000 * 60))
-                / 1000
-            );
-
-
-            document.getElementById("countdown").innerHTML =
-                `${days}D : ${hours}H : ${minutes}M : ${seconds}S`;
-        }
-
-
-        updateCountdown();
-
-        setInterval(updateCountdown, 1000);
-
-    </script>
-
+    <script src="js/script.js"></script>
 </body>
 </html>
