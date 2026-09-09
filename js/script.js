@@ -3,14 +3,14 @@
    ================================ */
 
 /* Change your next meet here */
-const nextMeet = new Date("2026-09-26T19:00:00");
+const nextMeet = new Date("2035-09-26T18:00:00");
 
 /* Change the text shown above the timer */
 document.getElementById("meetName").textContent =
     "REDLINE TENNESSEE MEET";
 
 document.getElementById("meetDateText").textContent =
-    "September 26, 2026 • 7:00 PM";
+    "Unknown Date • 6:00 PM";
 
 
 /* Countdown */
