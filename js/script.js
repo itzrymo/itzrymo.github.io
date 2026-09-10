@@ -52,7 +52,7 @@ setInterval(updateCountdown, 1000);
 
 /* ================================
    RAIN EFFECT
-   ================================ */
+   ================================
 
 const rain = document.getElementById("rain");
 
@@ -75,4 +75,37 @@ for (let i = 0; i < 95; i++) {
         (35 + Math.random() * 65) + "px";
 
     rain.appendChild(drop);
+}
+*/
+
+const fog = document.getElementById("red-fog");
+
+if (fog) {
+
+    for (let i = 0; i < 8; i++) {
+
+        const cloud = document.createElement("div");
+
+        cloud.className = "fog-cloud";
+
+        cloud.style.left =
+            Math.random() * 100 + "%";
+
+        cloud.style.top =
+            Math.random() * 100 + "%";
+
+        cloud.style.width =
+            300 + Math.random() * 500 + "px";
+
+        cloud.style.height =
+            200 + Math.random() * 400 + "px";
+
+        cloud.style.animationDuration =
+            18 + Math.random() * 20 + "s";
+
+        cloud.style.animationDelay =
+            -Math.random() * 20 + "s";
+
+        fog.appendChild(cloud);
+    }
 }
