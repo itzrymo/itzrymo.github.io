@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Beginning of REDLINE | REDLINE Tennessee</title>
+
+    <link rel="icon" type="image/png" href="images/redline-favicon.png">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #050505;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 18px 7%;
+
+            background: rgba(5, 5, 5, 0.95);
+            border-bottom: 1px solid #222;
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 900;
+            letter-spacing: 4px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: #d40000;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+        }
+
+        .nav-links a {
+            color: #aaa;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #fff;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 72vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 100px 20px;
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,.55),
+                    rgba(0,0,0,.9)
+                ),
+                url("images/redline-beginning.jpg") center/cover;
+
+            border-bottom: 1px solid #222;
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .hero-label {
+            color: #d40000;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 4px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: clamp(55px, 9vw, 110px);
+            line-height: .9;
+            font-weight: 900;
+            letter-spacing: -4px;
+        }
+
+        .hero h1 span {
+            color: #d40000;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: 30px auto 0;
+
+            color: #aaa;
+
+            font-size: 17px;
+        }
+
+        /* GENERAL */
+
+        .section {
+            padding: 90px 7%;
+            max-width: 1300px;
+            margin: auto;
+        }
+
+        .section-label {
+            color: #d40000;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 4px;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: clamp(35px, 5vw, 60px);
+            line-height: 1;
+            margin-bottom: 25px;
+        }
+
+        .section-text {
+            color: #aaa;
+            max-width: 850px;
+            font-size: 17px;
+        }
+
+        /* ORIGIN STORY */
+
+        .story {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .story-image {
+            min-height: 450px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #080808;
+
+            border: 1px solid #292929;
+
+            padding: 50px;
+        }
+        .story-image img {
+            width: 75%;
+            max-width: 450px;
+            height: auto;
+
+            object-fit: contain;
+        }
+
+        .story-date {
+            display: inline-block;
+
+            padding: 8px 14px;
+
+            margin-bottom: 20px;
+
+            background: #d40000;
+            color: #fff;
+
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .story-content h2 {
+            font-size: 42px;
+            line-height: 1.05;
+            margin-bottom: 20px;
+        }
+
+        .story-content p {
+            color: #aaa;
+            margin-bottom: 18px;
+        }
+
+        /* FOUNDERS */
+
+        .founders-section {
+            background: #080808;
+            border-top: 1px solid #171717;
+            border-bottom: 1px solid #171717;
+        }
+
+        .founders-header {
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto 50px;
+        }
+
+        .founders-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .founder-card {
+            background: #0d0d0d;
+            border: 1px solid #242424;
+            overflow: hidden;
+            transition: .3s;
+        }
+
+        .founder-card:hover {
+            transform: translateY(-7px);
+            border-color: #d40000;
+        }
+
+        .founder-image {
+            height: 350px;
+            background: #111;
+            overflow: hidden;
+        }
+
+        .founder-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .founder-content {
+            padding: 25px;
+        }
+
+        .founder-role {
+            color: #d40000;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+
+        .founder-content h3 {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .founder-content p {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            color: #fff;
+
+            padding: 8px 12px;
+
+            border: 1px solid #333;
+
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 1px;
+
+            transition: .3s;
+        }
+
+        .social-links a:hover {
+            background: #d40000;
+            border-color: #d40000;
+        }
+
+        /* TIMELINE */
+
+        .timeline-section {
+            background: #050505;
+        }
+
+        .timeline {
+            max-width: 850px;
+            margin: 50px auto 0;
+
+            border-left: 2px solid #d40000;
+            padding-left: 35px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 50px;
+        }
+
+        .timeline-item::before {
+            content: "";
+
+            position: absolute;
+
+            width: 12px;
+            height: 12px;
+
+            background: #d40000;
+
+            border-radius: 50%;
+
+            left: -42px;
+            top: 7px;
+
+            box-shadow: 0 0 15px rgba(212,0,0,.7);
+        }
+
+        .timeline-date {
+            color: #d40000;
+
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 3px;
+
+            margin-bottom: 8px;
+        }
+
+        .timeline-item h3 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .timeline-item p {
+            color: #888;
+            max-width: 700px;
+        }
+
+        /* FIRST MEET */
+
+        .meet-section {
+            background: #090909;
+            border-top: 1px solid #1c1c1c;
+        }
+
+        .meet-header {
+            max-width: 800px;
+            margin-bottom: 45px;
+        }
+
+        .meet-header h2 {
+            font-size: 50px;
+            line-height: 1;
+            margin-bottom: 18px;
+        }
+
+        .meet-header p {
+            color: #999;
+        }
+
+        .meet-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 20px;
+        }
+
+        .meet-photo {
+            position: relative;
+            overflow: hidden;
+            background: #111;
+            border: 1px solid #242424;
+            min-height: 400px;
+        }
+
+        .meet-photo.large {
+            min-height: 520px;
+        }
+
+        .meet-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+
+            transition: .4s;
+        }
+
+        .meet-photo:hover img {
+            transform: scale(1.03);
+        }
+
+        .photo-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            padding: 18px;
+
+            background: linear-gradient(
+                transparent,
+                rgba(0,0,0,.9)
+            );
+
+            font-weight: bold;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        .photo-label span {
+            display: block;
+            color: #d40000;
+            font-size: 10px;
+            letter-spacing: 3px;
+            margin-bottom: 4px;
+        }
+
+        /* GROWTH */
+
+        .growth {
+            text-align: center;
+            padding: 110px 20px;
+            background:
+                linear-gradient(
+                    rgba(0,0,0,.8),
+                    rgba(0,0,0,.95)
+                ),
+                url("images/redline-growth.jpg") center/cover;
+        }
+
+        .growth h2 {
+            font-size: clamp(40px, 6vw, 75px);
+            line-height: .95;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .growth h2 span {
+            color: #d40000;
+        }
+
+        .growth p {
+            color: #999;
+            max-width: 700px;
+            margin: 25px auto 0;
+            font-size: 17px;
+        }
+
+        .growth-stats {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            margin-top: 55px;
+            flex-wrap: wrap;
+        }
+
+        .stat h3 {
+            font-size: 40px;
+            color: #fff;
+        }
+
+        .stat p {
+            margin: 0;
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: #d40000;
+            font-weight: bold;
+        }
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+
+            padding: 35px 20px;
+
+            border-top: 1px solid #222;
+
+            color: #555;
+
+            font-size: 11px;
+            letter-spacing: 2px;
+        }
+
+        footer span {
+            color: #d40000;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 850px) {
+
+            nav {
+                padding: 16px 5%;
+            }
+
+            .nav-links {
+                gap: 12px;
+            }
+
+            .nav-links a {
+                font-size: 10px;
+            }
+
+            .story {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .story-image {
+                min-height: 320px;
+            }
+
+            .founders-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .founder-image {
+                height: 400px;
+            }
+
+            .meet-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .meet-photo,
+            .meet-photo.large {
+                min-height: 350px;
+            }
+
+            .growth-stats {
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                min-height: 65vh;
+                padding: 80px 20px;
+            }
+
+            .section {
+                padding: 70px 6%;
+            }
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .story-content h2 {
+                font-size: 34px;
+            }
+
+            .meet-header h2 {
+                font-size: 38px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+<!-- NAV -->
+
+<nav>
+
+    <a href="index.html" class="logo">
+        RED<span>LINE</span>
+    </a>
+
+    <div class="nav-links">
+
+        <a href="index.html">HOME</a>
+
+        <a href="meet-info.html">MEET INFO</a>
+
+        <a href="creator.html">CREATORS</a>
+
+        <a href="beginning.html">OUR STORY</a>
+
+    </div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-label">
+            THE BEGINNING OF REDLINE
+        </div>
+
+        <h1>
+            WHERE IT<br>
+            <span>STARTED.</span>
+        </h1>
+
+        <p>
+            Three people. One idea. One community.
+            The story behind how REDLINE began in Dickson, Tennessee
+            and started growing across the state.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ORIGIN STORY -->
+
+<section class="section">
+
+    <div class="story">
+
+        <div class="story-image">
+            <img src="images/redline-favicon.png" alt="REDLINE Logo">
+        </div>
+
+        <div class="story-content">
+
+            <div class="story-date">
+                JULY 7, 2026
+            </div>
+
+            <h2>
+                IT STARTED WITH AN IDEA.
+            </h2>
+
+            <p>
+                REDLINE was founded on July 7th, 2026 by
+                <strong>Itz_rymo, Alexa, and thtgsxrtho.</strong>
+            </p>
+
+            <p>
+                The idea was simple — create something that
+                Dickson, Tennessee could call its own.
+            </p>
+
+            <p>
+                REDLINE was created to give the local car,
+                motorcycle, and truck community a place to meet,
+                connect, and enjoy the culture in a
+                <strong>legal and respectful environment.</strong>
+            </p>
+
+            <p>
+                What started as a small idea quickly became
+                something much bigger.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOUNDERS -->
+
+<section class="section founders-section">
+
+    <div class="founders-header">
+
+        <div class="section-label">
+            THE PEOPLE BEHIND IT
+        </div>
+
+        <h2 class="section-title">
+            THE FOUNDERS
+        </h2>
+
+        <p class="section-text" style="margin:auto;">
+            REDLINE started with three people who wanted to build
+            something different for the Tennessee automotive and
+            motorcycle community.
+        </p>
+
+    </div>
+
+
+    <div class="founders-grid">
+
+
+        <!-- ITZ_RYMO -->
+
+        <div class="founder-card">
+
+            <div class="founder-image">
+
+                <img src="images/founder-itzrymo.jpg"
+                     alt="Itz_rymo">
+
+            </div>
+
+            <div class="founder-content">
+
+                <div class="founder-role">
+                    REDLINE Founder & CEO
+                </div>
+
+                <h3>
+                    Itz_rymo
+                </h3>
+
+                <p>
+                    One of the original founders of REDLINE,
+                    helping turn the idea of a local Tennessee
+                    meet into a growing community.
+                </p>
+
+                <div class="social-links">
+
+                    <a href="https://www.tiktok.com/@itz_rymo"
+                       target="_blank">
+                        TIKTOK
+                    </a>
+
+                    <a href="https://www.instagram.com/itz_rymo"
+                       target="_blank">
+                        INSTAGRAM
+                    </a>
+
+                    <a href="https://www.youtube.com/@itz_rymo"
+                       target="_blank">
+                        Youtube
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ALEXA -->
+
+        <div class="founder-card">
+
+            <div class="founder-image">
+
+                <img src="images/image2.jpg"
+                     alt="Alexa">
+
+            </div>
+
+            <div class="founder-content">
+
+                <div class="founder-role">
+                    REDLINE Co-Founder / Creative Partner
+                </div>
+
+                <h3>
+                    Alexa
+                </h3>
+
+                <p>
+                    One of the three people who helped establish
+                    REDLINE and shape the community from the
+                    beginning.
+                </p>
+
+                <div class="social-links">
+
+                    <a href=""
+                       target="_blank">
+                        TIKTOK
+                    </a>
+
+                    <a href=""
+                       target="_blank">
+                        INSTAGRAM
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- THTGSXRTHO -->
+
+        <div class="founder-card">
+
+            <div class="founder-image">
+
+                <img src="images/john.jpg"
+                     alt="thtgsxrtho">
+
+            </div>
+
+            <div class="founder-content">
+
+                <div class="founder-role">
+                    REDLINE C.O.O.
+                </div>
+
+                <h3>
+                    thtgsxrtho
+                </h3>
+
+                <p>
+                    One of the original founders helping bring
+                    riders, drivers, and the Tennessee community
+                    together through REDLINE.
+                </p>
+
+                <div class="social-links">
+
+                    <a href="https://www.tiktok.com/@thtgsxrtho"
+                       target="_blank">
+                        TIKTOK
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- TIMELINE -->
+
+<section class="section timeline-section">
+
+    <div class="section-label">
+        HOW IT GREW
+    </div>
+
+    <h2 class="section-title">
+        FROM AN IDEA<br>
+        TO A COMMUNITY.
+    </h2>
+
+
+    <div class="timeline">
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-date">
+                JULY 7, 2026
+            </div>
+
+            <h3>
+                REDLINE IS BORN
+            </h3>
+
+            <p>
+                REDLINE was officially founded by Itz_rymo,
+                Alexa, and thtgsxrtho with the goal of creating
+                a legal, respectful automotive and motorcycle
+                meet for Dickson, Tennessee.
+            </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-date">
+                THE FIRST MEET
+            </div>
+
+            <h3>
+                THE COMMUNITY SHOWED UP
+            </h3>
+
+            <p>
+                What started with a few people turned into
+                the first REDLINE meet — bringing together
+                cars, motorcycles, trucks, and people from
+                the local area.
+            </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-date">
+                JULY 15, 2026
+            </div>
+
+            <h3>
+                REDLINE MERCH WAS DESIGNED
+            </h3>
+
+            <p>
+                Just days after REDLINE was founded, the first
+                basic REDLINE merch design was created. The goal
+                was to bring the REDLINE name to the public and
+                give the community something they could proudly
+                represent.
+            </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-date">
+                AUGUST 21, 2026
+            </div>
+
+            <h3>
+                THE SECOND MEET
+            </h3>
+
+            <p>
+                REDLINE held its second meet, and it was bigger
+                than the first. More riders, trucks, and cars
+                showed up as word continued to spread and the
+                community began to grow.
+            </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-date">
+                TODAY
+            </div>
+
+            <h3>
+                REDLINE IS EXPANDING
+            </h3>
+
+            <p>
+                REDLINE is now expanding across the state of
+                Tennessee while staying rooted in its local
+                community. New creators, riders, drivers, and
+                members are joining from areas including Jackson,
+                Nashville, and beyond.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- FIRST MEET -->
+
+<section class="section meet-section">
+
+    <div class="meet-header">
+
+        <div class="section-label">
+            WHERE IT ALL BECAME REAL
+        </div>
+
+        <h2>
+            THE FIRST<br>
+            REDLINE MEET.
+        </h2>
+
+        <p>
+            The first REDLINE meet was the moment the idea
+            became a real community. A few people turned
+            into a group of cars, bikes, trucks, and riders
+            coming together in Dickson, Tennessee.
+        </p>
+
+    </div>
+
+
+    <div class="meet-grid">
+
+
+        <!-- FIRST MEET PHOTO -->
+
+        <div class="meet-photo large">
+
+            <img src="images/first-meet.jpg"
+                 alt="First REDLINE Meet">
+
+            <div class="photo-label">
+
+                <span>
+                    01 • THE BEGINNING
+                </span>
+
+                THE FIRST REDLINE MEET
+
+            </div>
+
+        </div>
+
+
+        <!-- GROUP RIDE PHOTO -->
+
+        <div class="meet-photo">
+
+            <img src="images/first-group-ride.png"
+                 alt="First REDLINE Group Ride">
+
+            <div class="photo-label">
+
+                <span>
+                    02 • AFTER THE MEET
+                </span>
+
+                THE FIRST GROUP RIDE
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- GROWTH -->
+
+<section class="growth">
+
+    <div class="section-label">
+        THEN & NOW
+    </div>
+
+    <h2>
+        STARTED WITH A FEW.<br>
+        <span>BUILT FOR TENNESSEE.</span>
+    </h2>
+
+    <p>
+        REDLINE started small, but the goal was never to stay
+        small. Today, the community is expanding across
+        Tennessee while keeping its roots in the local
+        communities that helped build it.
+    </p>
+
+
+    <div class="growth-stats">
+
+        <div class="stat">
+
+            <h3>2026</h3>
+
+            <p>
+                FOUNDED
+            </p>
+
+        </div>
+
+
+        <div class="stat">
+
+            <h3>TN</h3>
+
+            <p>
+                OUR HOME
+            </p>
+
+        </div>
+
+
+        <div class="stat">
+
+            <h3>∞</h3>
+
+            <p>
+                MORE TO COME
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    REDLINE <span>•</span>
+    TENNESSEE <span>•</span>
+    EST. 2026
+
+</footer>
+
+
+</body>
+</html>
