@@ -1,0 +1,1044 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Creators | REDLINE Tennessee</title>
+
+    <meta name="description"
+        content="REDLINE Tennessee creator and affiliate community. Discover creators, riders, car enthusiasts and community members representing REDLINE.">
+
+    <link rel="icon" type="image/png" href="images/redline-favicon.png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background:
+                radial-gradient(circle at 50% -10%, rgba(255, 0, 0, 0.18), transparent 35%),
+                linear-gradient(180deg, #080808 0%, #0d0d0d 45%, #050505 100%);
+            color: #fff;
+            min-height: 100vh;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+            background-size: 45px 45px;
+            z-index: -1;
+        }
+
+        /* NAV */
+
+        nav {
+            width: 100%;
+            padding: 22px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            background: rgba(5,5,5,0.92);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            color: #fff;
+            text-decoration: none;
+            font-size: 25px;
+            font-weight: 900;
+            letter-spacing: 5px;
+        }
+
+        .logo span {
+            color: #e60000;
+        }
+
+        nav a {
+            color: #aaa;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.25s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #ff1616;
+        }
+
+        /* HERO */
+
+        .hero {
+            text-align: center;
+            padding: 95px 20px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 600px;
+            height: 2px;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                #e60000,
+                transparent
+            );
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 25px rgba(255,0,0,0.6);
+        }
+
+        .eyebrow {
+            color: #e60000;
+            font-weight: 900;
+            letter-spacing: 5px;
+            font-size: 12px;
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            font-size: clamp(48px, 9vw, 105px);
+            line-height: 0.9;
+            font-weight: 1000;
+            letter-spacing: -4px;
+            text-transform: uppercase;
+        }
+
+        h1 span {
+            color: #e60000;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: 25px auto 0;
+            color: #aaa;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        /* GENERAL SECTION */
+
+        .section {
+            width: 90%;
+            max-width: 1150px;
+            margin: 0 auto 90px;
+        }
+
+        .section-heading {
+            margin-bottom: 35px;
+        }
+
+        .section-heading small {
+            color: #e60000;
+            font-size: 11px;
+            letter-spacing: 4px;
+            font-weight: bold;
+        }
+
+        .section-heading h2 {
+            margin-top: 8px;
+            font-size: 42px;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        .section-heading p {
+            margin-top: 10px;
+            color: #888;
+            max-width: 750px;
+            line-height: 1.6;
+        }
+
+        /* INTRO */
+
+        .intro {
+            background: linear-gradient(
+                135deg,
+                #111,
+                #090909
+            );
+            border: 1px solid #222;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .intro::after {
+            content: "CREATOR";
+            position: absolute;
+            right: -20px;
+            bottom: -25px;
+            font-size: 95px;
+            font-weight: 1000;
+            color: rgba(255,0,0,0.025);
+        }
+
+        .intro h2 {
+            font-size: 27px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .intro p {
+            color: #aaa;
+            line-height: 1.8;
+            max-width: 850px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* CREATOR GRID */
+
+        .creator-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .creator-card {
+            background: #0d0d0d;
+            border: 1px solid #242424;
+            overflow: hidden;
+            transition: 0.3s;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        .creator-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(230,0,0,0.7);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+        }
+
+        .creator-image {
+            height: 230px;
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(230,0,0,0.25),
+                    rgba(0,0,0,0.9)
+                ),
+                #151515;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .creator-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .creator-placeholder {
+            font-size: 50px;
+            font-weight: 1000;
+            color: #e60000;
+        }
+
+        .creator-content {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .creator-badge {
+            display: inline-block;
+            background: #e60000;
+            color: #fff;
+            padding: 6px 9px;
+            font-size: 9px;
+            font-weight: 900;
+            letter-spacing: 1.5px;
+            margin-bottom: 14px;
+        }
+
+        .creator-content h3 {
+            font-size: 23px;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .creator-type {
+            color: #777;
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .creator-content p {
+            color: #999;
+            font-size: 13px;
+            line-height: 1.6;
+            min-height: 0;
+            margin: 0;
+        }
+
+        .creator-links {
+            display: flex;
+            gap: 10px;
+            margin-top: auto;
+            padding-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .creator-links a {
+            border: 1px solid #333;
+            color: #ccc;
+            text-decoration: none;
+            padding: 9px 12px;
+            font-size: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: 0.25s;
+        }
+
+        .creator-links a:hover {
+            background: #e60000;
+            border-color: #e60000;
+            color: #fff;
+        }
+
+        /* APPLY */
+
+        .apply-box {
+            border: 1px solid rgba(230,0,0,0.4);
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(230,0,0,0.10),
+                    rgba(10,10,10,0.95)
+                );
+            padding: 50px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .apply-box::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                repeating-linear-gradient(
+                    135deg,
+                    transparent 0px,
+                    transparent 25px,
+                    rgba(255,255,255,0.015) 26px,
+                    transparent 27px
+                );
+            pointer-events: none;
+        }
+
+        .apply-box h2 {
+            font-size: 40px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .apply-box h2 span {
+            color: #e60000;
+        }
+
+        .apply-box p {
+            color: #999;
+            max-width: 700px;
+            margin: 0 auto 28px;
+            line-height: 1.7;
+            position: relative;
+        }
+
+        .apply-button {
+            display: inline-block;
+            background: #e60000;
+            color: #fff;
+            text-decoration: none;
+            padding: 16px 30px;
+            font-size: 12px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.25s;
+            position: relative;
+        }
+
+        .apply-button:hover {
+            background: #ff1616;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(230,0,0,0.25);
+        }
+
+        .apply-note {
+            margin-top: 15px;
+            color: #666;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* REQUIREMENTS */
+
+        .requirements {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .requirement {
+            background: #0d0d0d;
+            border: 1px solid #222;
+            padding: 28px;
+        }
+
+        .requirement-number {
+            color: #e60000;
+            font-size: 11px;
+            font-weight: 900;
+            letter-spacing: 2px;
+        }
+
+        .requirement h3 {
+            margin: 10px 0 12px;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+
+        .requirement p {
+            color: #999;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        /* EMPTY CREATOR STATE */
+
+        .empty-creators {
+            text-align: center;
+            padding: 55px 20px;
+            border: 1px dashed #292929;
+            background: rgba(255,255,255,0.01);
+        }
+
+        .empty-creators h3 {
+            font-size: 24px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .empty-creators p {
+            color: #777;
+            font-size: 14px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            border-top: 1px solid #1d1d1d;
+            padding: 35px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #555;
+            font-size: 11px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        footer strong {
+            color: #e60000;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 850px) {
+
+            nav {
+                padding: 18px 5%;
+            }
+
+            nav a {
+                display: none;
+            }
+
+            .hero {
+                padding: 65px 20px 55px;
+            }
+
+            h1 {
+                letter-spacing: -2px;
+            }
+
+            .creator-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .requirements {
+                grid-template-columns: 1fr;
+            }
+
+            .apply-box {
+                padding: 35px 25px;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <a href="index.html" class="logo">
+            RED<span>LINE</span>
+        </a>
+
+        <div>
+            <a href="index.html">Home</a>
+            <a href="meet-info.html">Meet Info</a>
+            <a href="creator.html" class="active">Creators</a>
+        </div>
+
+    </nav>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="eyebrow">
+            TENNESSEE • CREATORS • COMMUNITY
+        </div>
+
+        <h1>
+            RED<span>LINE</span><br>
+            CREATORS
+        </h1>
+
+        <p>
+            Meet the creators helping grow the REDLINE community.
+            From motorcycles and cars to trucks, events and lifestyle content,
+            these creators represent what REDLINE is all about.
+        </p>
+
+    </section>
+
+
+    <!-- ABOUT CREATORS -->
+
+    <section class="section">
+
+        <div class="intro">
+
+            <h2>What is a REDLINE Creator?</h2>
+
+            <p>
+                REDLINE Creators are content creators, photographers,
+                videographers and community members who help showcase
+                Tennessee's car and motorcycle scene. Approved creators
+                may be featured on the REDLINE website, social media and
+                community events.
+                <br><br>
+                Some creators may also become official REDLINE Affiliates,
+                giving them an opportunity to work directly with the
+                REDLINE community and help promote upcoming events.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FEATURED AFFILIATES -->
+
+    <section class="section">
+
+        <div class="section-heading">
+
+            <small>OFFICIAL COMMUNITY PARTNERS</small>
+
+            <h2>REDLINE Affiliates</h2>
+
+            <p>
+                These creators are approved REDLINE affiliates and help
+                represent and promote the community.
+            </p>
+
+        </div>
+
+
+        <div class="creator-grid">
+
+            <!-- CREATOR 01 -->
+
+            <div class="creator-card">
+
+                <div class="creator-image">
+                    <img src="images/creator1.jpg"
+                         alt="REDLINE Creator">
+
+                </div>
+
+                <div class="creator-content">
+
+                    <span class="creator-badge">
+                        REDLINE AFFILIATE
+                    </span>
+
+                    <h3>FW._.HAI</h3>
+
+                    <div class="creator-type">
+                        Motorcycle • Content Creator
+                    </div>
+
+                    <p>
+                        FW._.HAI brings a unique style of motorcycle content to RedLine, focusing on riding, creativity, and high-quality visuals.
+                    </p>
+
+                    <p>
+                        Creator Code "Hai"
+                    </p>
+
+                    <div class="creator-links">
+
+                        <a href="https://www.instagram.com/fw._.hai" target="_blank">
+                            TikTok
+                        </a>
+
+                        <a href="https://www.instagram.com/fw._.hai" target="_blank">
+                            Instagram
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CREATOR 02 -->
+
+            <div class="creator-card">
+
+                <div class="creator-image">
+
+                    <img src="images/creator2.jpg"
+                         alt="REDLINE Creator">
+
+                </div>
+
+                <div class="creator-content">
+
+                    <span class="creator-badge">
+                        REDLINE AFFILIATE
+                    </span>
+
+                    <h3>Nash Bunni3</h3>
+
+                    <div class="creator-type">
+                        Photography
+                    </div>
+
+                    <p>
+                        Redline Photographer
+                    </p>
+
+                    <div class="creator-links">
+
+                        <a href="https://www.instagram.com/nash.bunni3" target="_blank">
+                            Instagram
+                        </a>
+
+                    <!--     <a href="#" target="_blank">
+                            TikTok
+                        </a>  -->
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CREATOR 03 -->
+
+            <!--<div class="creator-card">
+
+                <div class="creator-image">
+
+                    <img src="images/creator3.jpg"
+                         alt="REDLINE Creator">
+
+                </div>
+
+                <div class="creator-content">
+
+                    <span class="creator-badge">
+                        REDLINE AFFILIATE
+                    </span>
+
+                    <h3>Creator Name</h3>
+
+                    <div class="creator-type">
+                        Cars • Bikes • Events
+                    </div>
+
+                    <p>
+                        Add a short description about this creator,
+                        their content and what they bring to the
+                        REDLINE community.
+                    </p>
+
+                    <div class="creator-links">
+
+                        <a href="#" target="_blank">
+                            TikTok
+                        </a>
+
+                        <a href="#" target="_blank">
+                            Instagram
+                        </a>
+
+                        <a href="#" target="_blank">
+                            YouTube
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>  -->
+
+
+            <!-- CREATOR 04 -->
+
+            <!--<div class="creator-card">
+
+                <div class="creator-image">
+
+                    <img src="images/creator4.jpg"
+                         alt="REDLINE Creator">
+
+                </div>
+
+                <div class="creator-content">
+
+                    <span class="creator-badge">
+                        REDLINE AFFILIATE
+                    </span>
+
+                    <h3>Creator Name</h3>
+
+                    <div class="creator-type">
+                        Cars • Bikes • Events
+                    </div>
+
+                    <p>
+                        Add a short description about this creator,
+                        their content and what they bring to the
+                        REDLINE community.
+                    </p>
+
+                    <div class="creator-links">
+
+                        <a href="#" target="_blank">
+                            Instagram
+                        </a>
+
+                        <a href="#" target="_blank">
+                            TikTok
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>  -->
+
+
+            <!-- CREATOR 05 -->
+
+            <div class="creator-card">
+
+                <div class="creator-image">
+
+                    <img src="images/creator5.jpg"
+                         alt="REDLINE Creator">
+
+                </div>
+
+                <div class="creator-content">
+
+                    <span class="creator-badge">
+                        REDLINE AFFILIATE
+                    </span>
+
+                    <h3>Stormy_765</h3>
+
+                    <div class="creator-type">
+                        Photography
+                    </div>
+
+                    <p>
+                        Redline Photographer
+                    </p>
+
+                    <div class="creator-links">
+
+                        <a href="https://www.tiktok.com/@z_r0w" target="_blank">
+                            Instagram
+                        </a>
+
+                        <a href="https://www.instagram.com/stormy_765" target="_blank">
+                            TikTok
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CREATOR 06 -->
+
+            <!-- <div class="creator-card">
+
+                <div class="creator-image">
+
+                    <img src="images/creator6.jpg"
+                         alt="REDLINE Creator">
+
+                </div>
+
+                <div class="creator-content">
+
+                    <span class="creator-badge">
+                        REDLINE AFFILIATE
+                    </span>
+
+                    <h3>Creator Name</h3>
+
+                    <div class="creator-type">
+                        Cars • Bikes • Events
+                    </div>
+
+                    <p>
+                        Add a short description about this creator,
+                        their content and what they bring to the
+                        REDLINE community.
+                    </p>
+
+                    <div class="creator-links">
+
+                        <a href="#" target="_blank">
+                            Instagram
+                        </a>
+
+                        <a href="#" target="_blank">
+                            TikTok
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>  -->
+
+        </div>
+
+    </section>
+
+
+    <!-- BECOME A CREATOR -->
+
+    <section class="section">
+
+        <div class="apply-box">
+
+            <h2>
+                Want to Join <span>REDLINE?</span>
+            </h2>
+
+            <p>
+                Are you a content creator, photographer, videographer,
+                rider or car enthusiast? Submit your information to
+                become a REDLINE Creator or Affiliate.
+            </p>
+
+
+            <!--
+                GOOGLE FORM LINK
+
+                Replace the URL below with your Google Form URL.
+            -->
+
+            <a
+                href="https://forms.gle/qTizxFGioBf3KLAr6"
+                target="_blank"
+                class="apply-button">
+
+                Submit Creator Application
+
+            </a>
+
+            <div class="apply-note">
+                Applications are reviewed by REDLINE
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- REQUIREMENTS -->
+
+    <section class="section">
+
+        <div class="section-heading">
+
+            <small>BEFORE YOU APPLY</small>
+
+            <h2>Creator Expectations</h2>
+
+            <p>
+                Becoming a REDLINE Creator is about representing the
+                community in a positive way.
+            </p>
+
+        </div>
+
+
+        <div class="requirements">
+
+
+            <div class="requirement">
+
+                <div class="requirement-number">
+                    01 / CONTENT
+                </div>
+
+                <h3>Create & Share</h3>
+
+                <p>
+                    Create automotive or motorcycle-related content,
+                    event coverage, photography, videos or other
+                    content that fits the REDLINE community.
+                </p>
+
+            </div>
+
+
+            <div class="requirement">
+
+                <div class="requirement-number">
+                    02 / COMMUNITY
+                </div>
+
+                <h3>Represent REDLINE</h3>
+
+                <p>
+                    Treat other members, creators, businesses and
+                    event locations with respect. Your actions while
+                    representing REDLINE matter.
+                </p>
+
+            </div>
+
+
+            <div class="requirement">
+
+                <div class="requirement-number">
+                    03 / SAFETY
+                </div>
+
+                <h3>Ride Smart</h3>
+
+                <p>
+                    REDLINE does not promote reckless driving,
+                    street racing or illegal activity. Creators are
+                    expected to promote responsible riding and driving.
+                </p>
+
+            </div>
+
+
+            <div class="requirement">
+
+                <div class="requirement-number">
+                    04 / GROW
+                </div>
+
+                <h3>Build Together</h3>
+
+                <p>
+                    Help introduce people to REDLINE events, creators
+                    and the Tennessee automotive community. The goal
+                    is to grow the community together.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div>
+            <strong>REDLINE</strong> • Tennessee
+        </div>
+
+        <div>
+            Cars • Bikes • Trucks • Community
+        </div>
+
+        <div>
+            EST. 2026
+        </div>
+
+    </footer>
+
+
+</body>
+</html>
