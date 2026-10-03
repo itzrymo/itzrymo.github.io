@@ -147,13 +147,14 @@ a {
 }
 
 .brand {
+    color: var(--red);
     font-size: 25px;
     font-weight: 900;
     letter-spacing: 4px;
 }
 
 .brand-red {
-    color: var(--red);
+    color: var(--white);
 }
 
 .nav-center {
