@@ -27,9 +27,9 @@
     const m = date.getMonth() + 1;
     const d = date.getDate();
 
-    if (m === 12) return "halloween";
-    if (m === 10) return "christmas";
-    if (m === 7 && d <= 7) return "july";
+    if (m === 10) return "halloween";
+    if (m === 7) return "christmas";
+    if (m === 12 && d <= 7) return "july";
 
     if ([12, 1, 2].includes(m)) return "winter";
     if ([3, 4, 5].includes(m)) return "spring";
