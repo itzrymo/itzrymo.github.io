@@ -613,7 +613,7 @@ h3 em {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #fff;
+  background: #ff0000;
   animation: burst 1.2s ease-out forwards;
 }
 .pop {
@@ -621,7 +621,7 @@ h3 em {
   width: 3px;
   height: 3px;
   border-radius: 50%;
-  background: #fff;
+  background: #00d9ff;
   animation: pop 900ms ease-out forwards;
 }
 @keyframes fall {
