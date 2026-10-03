@@ -1,120 +1,82 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>REDLINE — Tennessee</title>
-    <link rel="stylesheet" href="css/halloween.css" />
-    <link rel="stylesheet" href="css/base.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="Redline Tennessee — car, bike and truck community. Ride hard. Meet up. Leave a mark.">
+  <title>REDLINE — Tennessee Automotive Community</title>
+  <!-- SEASON SWITCH: change the stylesheet filename below -->
+  <link rel="stylesheet" href="css/halloween.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true">
+    <div class="ambient-grid"></div><div class="glow glow-one"></div><div class="glow glow-two"></div>
+    <div class="light-beam"></div><div class="season-effects" id="seasonEffects"></div>
+  </div>
 
-  <body>
-    <header>
-      <a class="logo" href="#">RED<span>LINE</span><small>TENNESSEE</small></a>
-      <nav id="nav">
-        <a href="#about">ABOUT</a><a href="#gallery">COMMUNITY</a
-        ><a href="#events">EVENTS</a><a href="#contact">CONTACT</a>
-      </nav>
-      <a class="toplink" href="#events">UPCOMING MEET ↗</a
-      ><button id="menu">☰</button>
-    </header>
-    <main>
-      <section class="hero">
-        <div class="hero-photo">
-          <img src="assets/hero.jpg" alt="Redline community" /><span
-            >01 / TENNESSEE</span
-          >
-        </div>
-        <div class="hero-copy">
-          <label>TENNESSEE · EST. 2020</label>
-          <h1>BUILT<br />AROUND<br /><em>THE DRIVE.</em></h1>
-          <p>
-            A community for the people who live for the road, the build, and
-            everything that brings us together.
-          </p>
-          <a class="arrow" href="#gallery">DISCOVER REDLINE <b>↘</b></a>
-        </div>
-        <div class="hero-foot">
-          CAR / BIKE / TRUCK COMMUNITY <span>01 — 04</span>
-        </div>
-      </section>
-      <section class="about" id="about">
-        <label>01 / WHO WE ARE</label>
-        <div>
-          <h2>MORE THAN<br />A <em>MEETUP.</em></h2>
-          <article>
-            <p>
-              Redline brings together drivers, riders, builders, and enthusiasts
-              from across Tennessee. Different backgrounds. Different machines.
-              A shared respect for the culture.
-            </p>
-            <strong>REDLINE TENNESSEE, LLC <i>·</i> TENNESSEE</strong>
-          </article>
-        </div>
-      </section>
-      <section class="gallery" id="gallery">
-        <div class="section-head">
-          <div>
-            <label>02 / THE COMMUNITY</label>
-            <h2>OUR WORLD<span>.</span></h2>
-          </div>
-          <p>THE MACHINES. THE PEOPLE.<br />THE MOMENTS IN BETWEEN.</p>
-        </div>
-        <div class="tiles">
-          <figure class="wide">
-            <img src="assets/bike.jpg" alt="Motorcycle" />
-            <figcaption>01 <b>TWO WHEELS</b></figcaption>
-          </figure>
-          <figure>
-            <img src="assets/car.jpg" alt="Car" />
-            <figcaption>02 <b>FOUR WHEELS</b></figcaption>
-          </figure>
-          <figure>
-            <img src="assets/lineup.jpg" alt="Motorcycle lineup" />
-            <figcaption>03 <b>THE LINEUP</b></figcaption>
-          </figure>
-          <figure>
-            <img src="assets/trucks.jpg" alt="Truck meet" />
-            <figcaption>04 <b>AFTER HOURS</b></figcaption>
-          </figure>
-          <figure class="wide">
-            <img src="assets/crew.jpg" alt="Redline members" />
-            <figcaption>05 <b>THE PEOPLE</b></figcaption>
-          </figure>
-        </div>
-      </section>
-      <section class="event" id="events">
-        <img src="assets/trucks.jpg" alt="Vehicles at a meet" />
-        <div>
-          <label>03 / GET TOGETHER</label>
-          <h2>NEXT UP<span>.</span></h2>
-          <strong>REDLINE TENNESSEE MEET</strong>
-          <p>Event details announced through our social channels.</p>
-          <a class="arrow" href="#contact">MEET INFORMATION <b>↗</b></a>
-        </div>
-      </section>
-      <section class="closing" id="contact">
-        <label>TENNESSEE · CAR · BIKE · TRUCK</label>
-        <h2>FIND YOUR<br /><em>REDLINE.</em></h2>
-        <a class="button" href="redline.bike.car.community@gmail.com"
-          >GET IN TOUCH ↗</a
-        >
-      </section>
-    </main>
-    <footer>
-      <a class="logo" href="#">RED<span>LINE</span></a>
-      <p>
-        REDLINE TENNESSEE, LLC<br /><small
-          >© <span id="year"></span> ALL RIGHTS RESERVED</small
-        >
-      </p>
-      <a href="#">BACK TO TOP ↑</a>
-    </footer>
-    <script src="js/halloween.js"></script>
-  </body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Redline home">
+      <span class="brand-kicker">TENNESSEE • CAR • BIKE • TRUCK COMMUNITY</span>
+      <span class="brand-word"><span>RED</span><b>LINE</b></span>
+      <span class="brand-tagline">RIDE HARD. MEET UP. LEAVE A MARK.</span>
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#community">Community</a><a href="#gallery">Gallery</a><a href="#meet">Meet info</a><a href="#merch">Merch</a>
+      <a class="nav-cta" href="#contact">Join Redline <span>↗</span></a>
+    </nav>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><i></i> BUILT IN TENNESSEE. MADE TO MOVE.</div>
+        <h1>NOT JUST A<br><em>COMMUNITY.</em><br><span>A MOVEMENT.</span></h1>
+        <p>Cars. Bikes. Trucks. Different machines, one shared redline. Pull up, meet the people, and make memories worth keeping.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#meet">Find the next meet <span>↗</span></a><a class="text-link" href="#gallery">Explore the scene <span>↓</span></a></div>
+        <div class="hero-meta"><span><b>01</b> TENNESSEE ROOTED</span><span><b>02</b> COMMUNITY DRIVEN</span><span><b>03</b> ALL BUILDS WELCOME</span></div>
+      </div>
+      <div class="hero-art" role="img" aria-label="Abstract dramatic automotive photography placeholder">
+        <div class="hero-art-image"></div><div class="hero-art-shade"></div>
+        <div class="hero-stamp"><span>EST.</span><strong>2020</strong><small>TENNESSEE</small></div>
+        <div class="hero-caption"><span>THE REDLINE EXPERIENCE</span><b>MORE THAN THE MACHINE.</b></div>
+        <div class="hero-index">RL<span> / </span>001</div>
+      </div>
+      <div class="side-label">TENNESSEE • USA — EST. 2020</div>
+    </section>
+
+    <section class="trust-strip" id="community">
+      <div class="trust-mark"><span class="seal">RL</span><div><b>REDLINE TENNESSEE, LLC</b><small>OFFICIAL BUSINESS IDENTITY</small></div></div>
+      <p>Independent spirit. Organized community.<br><strong>One name. One standard. REDLINE.</strong></p>
+      <div class="trust-note"><i></i> TENNESSEE BASED <span> / </span> COMMUNITY FOCUSED</div>
+    </section>
+
+    <section class="section gallery-section" id="gallery">
+      <div class="section-heading"><div><div class="eyebrow">THE PEOPLE. THE BUILDS. THE MOMENTS.</div><h2>THIS IS <em>REDLINE.</em></h2></div><a class="text-link" href="#contact">Follow the community ↗</a></div>
+      <div class="gallery-grid">
+        <article class="gallery-card photo-one"><div class="photo-label">01 <span>THE CREW</span></div><div class="photo-title">UNITED BY<br>THE DRIVE.</div></article>
+        <article class="gallery-card photo-two"><div class="photo-label">02 <span>TWO WHEELS</span></div><div class="photo-title">OWN<br>YOUR LINE.</div></article>
+        <article class="gallery-card photo-three"><div class="photo-label">03 <span>FOUR WHEELS</span></div><div class="photo-title">BUILT TO<br>STAND OUT.</div></article>
+        <article class="gallery-card photo-four"><div class="photo-label">04 <span>THE MEETS</span></div><div class="photo-title">GOOD PEOPLE.<br>GREAT BUILDS.</div></article>
+      </div>
+      <p class="image-note">PHOTO NOTE: Replace the four background-image declarations in css/base.css with your own Redline event photos.</p>
+    </section>
+
+    <section class="meet-section" id="meet">
+      <div class="meet-copy"><div class="eyebrow">SAVE THE DATE • SHOW UP • CONNECT</div><h2>THE NEXT<br><em>REDLINE MEET.</em></h2><p>Good builds, good people, and a place to belong. Keep an eye on our socials for the next official meet details.</p><a class="button button-outline" href="#contact">Meet information <span>↗</span></a></div>
+      <div class="meet-panel"><div class="meet-top"><span>UP NEXT</span><span class="live-dot">COMMUNITY EVENT</span></div><div class="meet-name">REDLINE <b>TENNESSEE</b></div><div class="countdown" id="countdown"><div><strong>--</strong><small>DAYS</small></div><div><strong>--</strong><small>HRS</small></div><div><strong>--</strong><small>MIN</small></div><div><strong>--</strong><small>SEC</small></div></div><small class="countdown-help">Set your next event date in js/summer.js (or the active seasonal script).</small><div class="meet-bottom">TENNESSEE <span>•</span> ALL BUILDS WELCOME</div></div>
+    </section>
+
+    <section class="bottom-cta" id="merch"><div><div class="eyebrow">WEAR THE NAME. REPRESENT THE COMMUNITY.</div><h2>LEAVE A <em>MARK.</em></h2></div><a class="button button-primary" href="#contact">Explore Redline <span>↗</span></a></section>
+  </main>
+
+  <footer id="contact"><a class="footer-brand" href="#top">RED<span>LINE</span></a><div class="footer-center">TENNESSEE • CAR • BIKE • TRUCK COMMUNITY<br><small>RIDE HARD. MEET UP. LEAVE A MARK.</small></div><div class="footer-right">REDLINE TENNESSEE, LLC<br><small>© <span id="year"></span> ALL RIGHTS RESERVED</small></div></footer>
+  <!-- SEASON SWITCH: change the JavaScript filename below to match the CSS season -->
+  <script src="js/halloween.js"></script>
+</body>
 </html>
