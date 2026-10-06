@@ -197,21 +197,43 @@
           </article>
 
           <article class="product">
-            <a class="product-image" href="YOUR_PRODUCT_LINK" target="_blank" rel="noopener">
-              <img src="../merch-image/redline-jail.png" alt="REDLINE Jail" />
-              <span class="tag">REDLINE Jail</span><span class="arrow">↗</span>
+            <a
+              class="product-image local-product"
+              href="#"
+              onclick="
+                openLocalMerch('REDLINE COUNTY JAIL');
+                return false;
+              "
+            >
+              <img
+                src="../merch-image/redline-jail.png"
+                alt="REDLINE County Jail"
+              />
+              <span class="tag">REDLINE JAIL</span>
+              <span class="arrow">↗</span>
             </a>
+
             <div class="info">
               <div class="title">
                 <div>
                   <small>REDLINE COLLECTION</small>
-                  <h3>REDLINE County Jail</h3>
+                  <h3>REDLINE COUNTY JAIL</h3>
                 </div>
                 <strong>$20.00</strong>
               </div>
+
               <div class="bottom">
-                <div class="colors"><i class="orange" title="Orange"></i></div>
-                <a class="shop" href="YOUR_PRODUCT_LINK" target="_blank" rel="noopener"
+                <div class="colors">
+                  <i class="orange" title="Orange"></i>
+                </div>
+
+                <a
+                  class="shop"
+                  href="#"
+                  onclick="
+                    openLocalMerch('REDLINE COUNTY JAIL');
+                    return false;
+                  "
                   >SHOP ↗</a
                 >
               </div>
@@ -219,9 +241,18 @@
           </article>
 
           <article class="product">
-            <a class="product-image" href="YOUR_PRODUCT_LINK" target="_blank" rel="noopener">
-              <img src="../merch-image/redline-division.png" alt="REDLINE Divison" />
-              <span class="tag">REDLINE Divison</span><span class="arrow">↗</span>
+            <a
+              class="product-image"
+              href="YOUR_PRODUCT_LINK"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="../merch-image/redline-division.png"
+                alt="REDLINE Divison"
+              />
+              <span class="tag">REDLINE Divison</span
+              ><span class="arrow">↗</span>
             </a>
             <div class="info">
               <div class="title">
@@ -232,8 +263,15 @@
                 <strong>$50.00</strong>
               </div>
               <div class="bottom">
-                <div class="colors"><i class="white" title="White"></i><i class="black" title="Black"></i></div>
-                <a class="shop" href="YOUR_PRODUCT_LINK" target="_blank" rel="noopener"
+                <div class="colors">
+                  <i class="white" title="White"></i
+                  ><i class="black" title="Black"></i>
+                </div>
+                <a
+                  class="shop"
+                  href="YOUR_PRODUCT_LINK"
+                  target="_blank"
+                  rel="noopener"
                   >SHOP ↗</a
                 >
               </div>
@@ -241,9 +279,18 @@
           </article>
 
           <article class="product">
-            <a class="product-image" href="YOUR_PRODUCT_LINK" target="_blank" rel="noopener">
-              <img src="../merch-image/redline-pretty.png" alt="REDLINE Pretty" />
-              <span class="tag">REDLINE Pretty Girl</span><span class="arrow">↗</span>
+            <a
+              class="product-image"
+              href="YOUR_PRODUCT_LINK"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="../merch-image/redline-pretty.png"
+                alt="REDLINE Pretty"
+              />
+              <span class="tag">REDLINE Pretty Girl</span
+              ><span class="arrow">↗</span>
             </a>
             <div class="info">
               <div class="title">
@@ -254,17 +301,32 @@
                 <strong>$50.00</strong>
               </div>
               <div class="bottom">
-                <div class="colors"><i class="white" title="White"></i><i class="black" title="Black"></i></div>
-                <a class="shop" href="YOUR_PRODUCT_LINK" target="_blank" rel="noopener"
+                <div class="colors">
+                  <i class="white" title="White"></i
+                  ><i class="black" title="Black"></i>
+                </div>
+                <a
+                  class="shop"
+                  href="YOUR_PRODUCT_LINK"
+                  target="_blank"
+                  rel="noopener"
                   >SHOP ↗</a
                 >
               </div>
             </div>
           </article>
-          
+
           <article class="product">
-            <a class="product-image" href="YOUR_PRODUCT_LINK" target="_blank" rel="noopener">
-              <img src="../merch-image/redline-basict.png" alt="REDLINE Basic" />
+            <a
+              class="product-image"
+              href="YOUR_PRODUCT_LINK"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="../merch-image/redline-basict.png"
+                alt="REDLINE Basic"
+              />
               <span class="tag">REDLINE BASIC</span><span class="arrow">↗</span>
             </a>
             <div class="info">
@@ -277,7 +339,11 @@
               </div>
               <div class="bottom">
                 <div class="colors"><i class="black" title="Black"></i></div>
-                <a class="shop" href="YOUR_PRODUCT_LINK" target="_blank" rel="noopener"
+                <a
+                  class="shop"
+                  href="YOUR_PRODUCT_LINK"
+                  target="_blank"
+                  rel="noopener"
                   >SHOP ↗</a
                 >
               </div>
@@ -314,5 +380,42 @@
       <div>TENNESSEE CAR & BIKE COMMUNITY <b>•</b> EST. 2026</div>
     </footer>
     <script src="../js/merch.js"></script>
+
+    <div id="localMerchModal" class="local-merch-modal">
+      <div class="local-merch-overlay" onclick="closeLocalMerch()"></div>
+
+      <div class="local-merch-box">
+        <button class="local-merch-close" onclick="closeLocalMerch()">×</button>
+
+        <div class="local-merch-icon">REDLINE</div>
+
+        <small>LOCAL REDLINE MERCH</small>
+
+        <h2 id="localMerchTitle">REDLINE MERCH</h2>
+
+        <p>
+          This item is currently available directly through the
+          <strong>Redline Team</strong>.
+        </p>
+
+        <p class="contact-message">
+          Contact <strong>@redlineevent</strong> on Instagram to inquire about
+          this product.
+        </p>
+
+        <a
+          class="instagram-button"
+          href="https://www.instagram.com/redlineevent/"
+          target="_blank"
+          rel="noopener"
+        >
+          CONTACT REDLINE ↗
+        </a>
+
+        <button class="continue-button" onclick="closeLocalMerch()">
+          CONTINUE SHOPPING
+        </button>
+      </div>
+    </div>
   </body>
 </html>
