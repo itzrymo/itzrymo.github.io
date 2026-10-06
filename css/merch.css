@@ -326,6 +326,18 @@ footer span {
 .red {
   background: #d90000;
 }
+.blue {
+  background: #00aeff;
+}
+.purple {
+  background: #de00ff;
+}
+.yellow {
+  background: #ffe400;
+}
+.green {
+  background: #00b533;
+}
 .orange {
   background: #ff5100;
 }
